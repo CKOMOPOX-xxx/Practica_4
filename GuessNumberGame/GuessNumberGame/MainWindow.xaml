@@ -1,0 +1,21 @@
+﻿<Window x:Class="GuessNumberGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Угадай число" Height="400" Width="500">
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Компьютер загадал число от 1 до 100. Попробуйте угадать!" TextAlignment="Center"/>
+            <TextBox x:Name="GuessBox" Width="200" TextAlignment="Center"/>
+            <Button Content="Проверить" Click="CheckGuess_Click" Width="150" Margin="10"/>
+            <TextBlock x:Name="HintText" TextAlignment="Center"/>
+            <TextBlock x:Name="AttemptsText" Text="Попыток: 0" TextAlignment="Center"/>
+            <Button Content="Начать заново" Click="RestartGame_Click" Width="150" Margin="10"/>
+            <TextBlock Text="Введите имя для сохранения результата:"/>
+            <TextBox x:Name="PlayerNameBox" Width="200"/>
+            <Button Content="Сохранить результат" Click="SaveResult_Click" Width="150" Margin="10"/>
+
+            <TextBlock Text="Лучшие результаты:" FontWeight="Bold" Margin="10,10,0,0"/>
+            <ListBox x:Name="ResultsListBox" Width="300" Height="100"/>
+        </StackPanel>
+    </Grid>
+</Window>
